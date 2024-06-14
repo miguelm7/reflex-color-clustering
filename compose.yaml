@@ -7,11 +7,11 @@
 # to publicly accessible domain where app will be hosted
 services:
   app:
-    image: local/reflex-app
+    image: local/reflex-colors
     environment:
       DB_URL: sqlite:///data/reflex.db
     ports:
-      - 8000:8000 # modify to not used port
+      - 8800:8000 # modify to not used port
     build:
       context: .
       dockerfile: prod.Dockerfile
