@@ -20,9 +20,11 @@ RUN mkdir -p /app/data /app/uploaded_files
 #ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 #RUN $uv venv
 
+RUN apt-get update && apt-get install libgl1 -y
+
 # Install app requirements and reflex inside virtualenv
 #RUN $uv pip install -r requirements.txt
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # Deploy templates and prepare app
 RUN reflex init
