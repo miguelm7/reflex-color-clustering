@@ -7,8 +7,8 @@ def about():
     return rx.container(
         navbar(),
         rx.vstack(
-            rx.heading("About this App"),
-            rx.text("""This app is a simple color palette grenerator from images.
+            rx.heading("About this tool"),
+            rx.text("""This tool is a simple color palette grenerator from images.
                         You can upload any image from the supported types and get a color palette from the dominant colors of the image.
                     """),
             rx.heading("How it works"),

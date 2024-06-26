@@ -237,5 +237,11 @@ def index():
     
 
 app = rx.App()
-app.add_page(index,title="Dominant Colors from Image")
+app.add_page(
+    index,
+    title="Dominant Colors from Image",
+    description=
+    """This tool is a simple color palette grenerator from images. 
+    You can upload any image from the supported types and get a color 
+    palette from the dominant colors of the image.""")
 app.add_page(about,"about")
