@@ -9,6 +9,7 @@ from .components.navbar import navbar
 
 from .pages.about import about
 
+G_TAG = "G-W0XSPLQDLS"
 
 def get_colors(image, clusters):
     def create_bar(height, width, color):
@@ -236,7 +237,19 @@ def index():
 
     
 
-app = rx.App()
+app = rx.App(    
+    head_components=[
+        rx.script(src=f"https://www.googletagmanager.com/gtag/js?id={G_TAG}"),
+        rx.script(
+            f"""
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){{dataLayer.push(arguments);}}
+            gtag('js', new Date());
+            gtag('config', '{G_TAG}');
+            """
+        ),
+    ],
+)
 app.add_page(
     index,
     title="Dominant Colors from Image",
