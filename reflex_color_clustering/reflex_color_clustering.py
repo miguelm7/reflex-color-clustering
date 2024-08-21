@@ -237,7 +237,10 @@ def index():
 
     
 
-app = rx.App(    
+app = rx.App(
+    theme=rx.theme(
+        appearance="light"
+    ),    
     head_components=[
         rx.script(src=f"https://www.googletagmanager.com/gtag/js?id={G_TAG}"),
         rx.script(
