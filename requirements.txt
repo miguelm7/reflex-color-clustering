@@ -2,3 +2,4 @@ numpy
 opencv-python
 opencv-python-headless
 reflex==0.5.10
+python-socketio==5.7.0
