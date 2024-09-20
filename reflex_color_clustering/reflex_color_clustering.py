@@ -66,7 +66,7 @@ def colored_box(color: str):
 def hex_colors(color: str):
     return rx.box(
         rx.text(color),
-        background_color="white",
+        # background_color="white",
         border_radius="1px",
         width="20%",
         margin="1px",

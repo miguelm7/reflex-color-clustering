@@ -2,6 +2,6 @@
 *.py[cod]
 *.venv
 .web
+/uploaded_files
 __pycache__/
 assets/external/
-/uploaded_files
